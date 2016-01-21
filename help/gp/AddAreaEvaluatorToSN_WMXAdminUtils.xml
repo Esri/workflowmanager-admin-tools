@@ -1,0 +1,59 @@
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20101230</CreaDate>
+    <CreaTime>15592800</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool xmlns="" name="AddAreaEvaluatorToSN" displayname="Add Area Evaluator to Spatial Notification" toolboxalias="WMXAdminUtils" softwarerestriction="none">
+    <summary>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool adds a new area evaluator to an existing spatial notification. Please refer to the Workflow Manager user's guide for further details on both spatial notifications and area evaluators.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</summary>
+    <parameters>
+      <param sync="true" name="in_string_spatialNotification" displayname="Name of Spatial Notification" datatype="String" direction="Input" expression="in_string_spatialNotification" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the spatial notification to which the area evaluator will be added.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is created dynamically based on the contents of the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the spatial notification to which the area evaluator will be added.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is created dynamically based on the contents of the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_geometricOperation" displayname="Geometric operation (ex: notifier AOI &lt;xxx&gt; feature)" datatype="String" direction="Input" expression="in_string_geometricOperation" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The geometric operation used by the area evaluator.  The following relationship governs how the area evaluator will work:&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;&amp;lt;notifier AOI&amp;gt; &amp;lt;geometric operation&amp;gt; &amp;lt;feature&amp;gt; &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;So for instance, suppose that "notifier AOI" was a polygon representing the United States, and "geometric operation" was "CONTAINS".  The area evaluator would evaluate to true for any feature that is contained by the U.S. polygon.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The following values are available as options (please see the ArcGIS Desktop user's guide for further information):&lt;/SPAN&gt;&lt;/P&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;CONTAINS&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;CROSSES&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;ENVELOPE_INTERSECTS&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;INTERSECTS&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;OVERLAPS&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;TOUCHES&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;WITHIN&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The geometric operation used by the area evaluator.  The following relationship governs how the area evaluator will work:&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;&amp;lt;notifier AOI&amp;gt; &amp;lt;geometric operation&amp;gt; &amp;lt;feature&amp;gt; &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;So for instance, suppose that "notifier AOI" was a polygon representing the United States, and "geometric operation" was "CONTAINS".  The area evaluator would evaluate to true for any feature that is contained by the U.S. polygon.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The following values are available as options (please see the ArcGIS Desktop user's guide for further information):&lt;/SPAN&gt;&lt;/P&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;CONTAINS&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;CROSSES&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;ENVELOPE_INTERSECTS&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;INTERSECTS&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;OVERLAPS&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;TOUCHES&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;WITHIN&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_bool_useInverse" displayname="Use the inverse of the geometric operation above (ex: notifier AOI does not &lt;xxx&gt; feature)" datatype="Boolean" direction="Input" expression="in_bool_useInverse" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This flag indicates whether the inverse of the geometric operation named above should be used.  See the help for the "geometric operation" parameter for more detals.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This flag indicates whether the inverse of the geometric operation named above should be used.  See the help for the "geometric operation" parameter for more detals.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_bool_useJobAoi" displayname="Use the AOI of the job being worked as the notifier AOI" datatype="Boolean" direction="Input" expression="in_bool_useJobAoi" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This parameter indicates that the job AOI should be used as the area against which to check feature changes.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;In a script, the following options are available:&lt;/SPAN&gt;&lt;/P&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;USE_JOB_AOI / true&lt;/SPAN&gt;&lt;SPAN&gt; - Sets the area evaluator to use the individual job AOIs as test areas&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;USE_SELECTED_FEATURE / false&lt;/SPAN&gt;&lt;SPAN&gt; - Sets the area evaluator to use a specific feature as its test AOI (...to be specified in the next parameter)&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This parameter indicates that the job AOI should be used as the area against which to check feature changes.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;In a script, the following options are available:&lt;/SPAN&gt;&lt;/P&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;USE_JOB_AOI / true&lt;/SPAN&gt;&lt;SPAN&gt; - Sets the area evaluator to use the individual job AOIs as test areas&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;USE_SELECTED_FEATURE / false&lt;/SPAN&gt;&lt;SPAN&gt; - Sets the area evaluator to use a specific feature as its test AOI (...to be specified in the next parameter)&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_layer_alternateAoi" displayname="Area of Interest (polygon layer with exactly one selected feature)" datatype="Layer" direction="Input" expression="in_layer_alternateAoi" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This argument allows a feature layer with a single selected feature to be passed in.  The boundary of this selected feature will be used as the test AOI for the area evaluator.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Since this argument requires a layer with a selected feature, it is best used as part of a GP script or model.  (See the "Documentation" folder for some examples.)&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;This parameter is only enabled if the "use job AOI" parameter is set to "false".&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This argument allows a feature layer with a single selected feature to be passed in.  The boundary of this selected feature will be used as the test AOI for the area evaluator.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Since this argument requires a layer with a selected feature, it is best used as part of a GP script or model.  (See the "Documentation" folder for some examples.)&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;This parameter is only enabled if the "use job AOI" parameter is set to "false".&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_wmxDatabaseAlias" displayname="Workflow Manager database alias" datatype="String" direction="Input" expression="in_string_wmxDatabaseAlias" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+    </parameters>
+    <usage>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The default Workflow Manager database must be set before running this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The user running this tool must have administrative access to the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</usage>
+  </tool>
+  <dataIdInfo>
+    <idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool adds a new area evaluator to an existing spatial notification. Please refer to the Workflow Manager user's guide for further details on both spatial notifications and area evaluators.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs>
+    <idCitation>
+      <resTitle>Add Area Evaluator to Spatial Notification</resTitle>
+    </idCitation>
+    <searchKeys>
+      <keyword>add</keyword>
+      <keyword>create</keyword>
+      <keyword>new</keyword>
+      <keyword>make</keyword>
+      <keyword>area</keyword>
+      <keyword>aoi</keyword>
+      <keyword>polygon</keyword>
+      <keyword>evaluator</keyword>
+      <keyword>spatial</keyword>
+      <keyword>notification</keyword>
+      <keyword>notifier</keyword>
+      <keyword>notify</keyword>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

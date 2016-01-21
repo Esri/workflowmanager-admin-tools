@@ -1,0 +1,39 @@
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20110330</CreaDate>
+    <CreaTime>10014400</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool xmlns="" name="ListJobsUsingQuery" displayname="List Jobs Using Query" toolboxalias="WMXAdminUtils" softwarerestriction="none">
+    <summary>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool allows the user to run one of the public queries in the Workflow Manager database, then returns a list containing the IDs of the jobs that matched this query.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;NOTE: User-specific queries cannot be executed by this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</summary>
+    <usage>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The default Workflow Manager database must be set before running this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</usage>
+    <parameters>
+      <param sync="true" name="in_string_queryName" displayname="Name of the query to use" datatype="String" direction="Input" expression="in_string_queryName" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the public job query to be run.  Note that queries located within folders or subfolders must have the complete query location specified.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the public job query to be run.  Note that queries located within folders or subfolders must have the complete query location specified.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_wmxDatabaseAlias" displayname="Workflow Manager database alias" datatype="String" direction="Input" expression="in_string_wmxDatabaseAlias" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool allows the user to run one of the public queries in the Workflow Manager database, then returns a list containing the IDs of the jobs that matched this query.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;NOTE: User-specific queries cannot be executed by this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs>
+    <idCitation>
+      <resTitle>List Jobs Using Query</resTitle>
+    </idCitation>
+    <searchKeys>
+      <keyword>list</keyword>
+      <keyword>show</keyword>
+      <keyword>get</keyword>
+      <keyword>jobs</keyword>
+      <keyword>job</keyword>
+      <keyword>id</keyword>
+      <keyword>ids</keyword>
+      <keyword>query</keyword>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

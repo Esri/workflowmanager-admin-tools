@@ -1,0 +1,35 @@
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20101220</CreaDate>
+    <CreaTime>14265300</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool xmlns="" name="ListAllDataWorkspaces" displayname="List All Data Workspaces" toolboxalias="WMXAdminUtils" softwarerestriction="none">
+    <summary>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool lists all of the data workspaces currently known to the Workflow Manager database. It produces a list of their names as strings in a MultiValue GP output.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</summary>
+    <usage>&lt;DIV STYLE="text-align:Left;"&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The default Workflow Manager database must be set before running this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The user running this tool must have administrative access to the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;There are no input parameters for this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;</usage>
+    <parameters>
+      <param sync="true" name="in_string_wmxDatabaseAlias" displayname="Workflow Manager database alias" datatype="String" direction="Input" expression="in_string_wmxDatabaseAlias" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool lists all of the data workspaces currently known to the Workflow Manager database. It produces a list of their names as strings in a MultiValue GP output.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs>
+    <idCitation>
+      <resTitle>List All Data Workspaces</resTitle>
+    </idCitation>
+    <searchKeys>
+      <keyword>list</keyword>
+      <keyword>data</keyword>
+      <keyword>workspace</keyword>
+      <keyword>workspaces</keyword>
+      <keyword>show</keyword>
+      <keyword>all</keyword>
+      <keyword>database</keyword>
+      <keyword>databases</keyword>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

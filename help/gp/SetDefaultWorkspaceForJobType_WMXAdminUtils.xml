@@ -1,0 +1,51 @@
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20110113</CreaDate>
+    <CreaTime>09330800</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool xmlns="" name="SetDefaultWorkspaceForJobType" displayname="Set Default Workspace for Job Type" toolboxalias="WMXAdminUtils" softwarerestriction="none">
+    <summary>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool provides a way to set the default data workspace and default parent version for a specific job type.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</summary>
+    <usage>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The default Workflow Manager database must be set before running this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The user running this tool must have administrative access to the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</usage>
+    <parameters>
+      <param sync="true" name="in_string_jobType" displayname="Job type name" datatype="String" direction="Input" expression="in_string_jobType" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the job type to be edited by this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on the jobs currently present in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the job type to be edited by this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on the jobs currently present in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_dataWorkspace" displayname="Default data workspace for this job type" datatype="String" direction="Input" expression="in_string_dataWorkspace" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the data workspace to be used as the default data workspace for new jobs of this type.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on the data workspaces entered into the Workflow Manager database.  You may also use the "[None]" option to indicate that the job type should not have a default data workspace.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;Please note&lt;/SPAN&gt;&lt;SPAN&gt;: If a workspace is chosen, it must be possible for the current user to connect to it at the time the tool is running.  The workspace will be examined for the versions available as potential default parent versions.  The tool will not work in a disconnected environment or when the server(s) hosting the data workspace(s) is/are offline.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the data workspace to be used as the default data workspace for new jobs of this type.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on the data workspaces entered into the Workflow Manager database.  You may also use the "[None]" option to indicate that the job type should not have a default data workspace.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;Please note&lt;/SPAN&gt;&lt;SPAN&gt;: If a workspace is chosen, it must be possible for the current user to connect to it at the time the tool is running.  The workspace will be examined for the versions available as potential default parent versions.  The tool will not work in a disconnected environment or when the server(s) hosting the data workspace(s) is/are offline.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_parentVersion" displayname="Default parent version for this job type" datatype="String" direction="Input" expression="in_string_parentVersion" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of a database version to be used as the default parent version for new jobs of this type.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on the versions available in the specified data workspace.  It is also possible to use the "[None]" option if no default parent version should be specified.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of a database version to be used as the default parent version for new jobs of this type.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on the versions available in the specified data workspace.  It is also possible to use the "[None]" option if no default parent version should be specified.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_wmxDatabaseAlias" displayname="Workflow Manager database alias" datatype="String" direction="Input" expression="in_string_wmxDatabaseAlias" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool provides a way to set the default data workspace and default parent version for a specific job type.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs>
+    <idCitation>
+      <resTitle>Set Default Workspace for Job Type</resTitle>
+    </idCitation>
+    <searchKeys>
+      <keyword>set</keyword>
+      <keyword>assign</keyword>
+      <keyword>select</keyword>
+      <keyword>default</keyword>
+      <keyword>data</keyword>
+      <keyword>workspace</keyword>
+      <keyword>database</keyword>
+      <keyword>dataset</keyword>
+      <keyword>parent</keyword>
+      <keyword>version</keyword>
+      <keyword>job</keyword>
+      <keyword>job type</keyword>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

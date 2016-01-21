@@ -1,0 +1,49 @@
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20110202</CreaDate>
+    <CreaTime>09475900</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ModDate>20110202</ModDate>
+    <ModTime>10220800</ModTime>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool name="ExecuteJob" displayname="Execute Job" toolboxalias="WMXDevUtils" xmlns="">
+    <parameters>
+      <param name="in_long_jobId" displayname="ID of job to execute" type="Required" direction="Input" datatype="Long" expression="in_long_jobId">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Specifies the ID of the job to be executed.  Note that only non-closed jobs are valid candidates for execution.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Specifies the ID of the job to be executed.  Note that only non-closed jobs are valid candidates for execution.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_wmxDatabaseAlias" displayname="Workflow Manager database alias" datatype="String" direction="Input" expression="in_string_wmxDatabaseAlias" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+    </parameters>
+    <summary>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This tool provides a way to execute the steps in a job from a GP tool or Python script. Execution begins at the job's current step and terminates when the workflow's configuration does not allow it to proceed any further.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</summary>
+    <usage>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The default Workflow Manager database must be set before running this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The current user must satisfy all Workflow Manager permissions for executing a job.  (Generally, the job being run must be assigned to the user running the GP tool.)&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The current workflow step(s) must be capable of being executed.  For instance, procedural steps can only be marked as complete, and so will cause an error if run.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;If the workflow steps launch new dialog boxes, these dialogs may be hidden behind other windows.  Additionally, in certain cases, the dialogs may be inaccessible due to the geoprocessor being set to run in the foreground.  These jobs can still be executed, but will need to run with background geoprocessing enabled, from a command prompt, or in some other way in which the GP window is not visible/modal.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;</usage>
+  </tool>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Execute Job</resTitle>
+    </idCitation>
+    <idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This tool provides a way to execute the steps in a job from a GP tool or Python script. Execution begins at the job's current step and terminates when the workflow's configuration does not allow it to proceed any further.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs>
+    <searchKeys>
+      <keyword>execute</keyword>
+      <keyword>exec</keyword>
+      <keyword>run</keyword>
+      <keyword>perform</keyword>
+      <keyword>advance</keyword>
+      <keyword>step</keyword>
+      <keyword>job</keyword>
+      <keyword>workflow</keyword>
+    </searchKeys>
+  </dataIdInfo>
+  <distInfo>
+    <distributor>
+      <distorFormat>
+        <formatName>ArcToolbox Tool</formatName>
+      </distorFormat>
+    </distributor>
+  </distInfo>
+  <mdDateSt>20110202</mdDateSt>
+</metadata>

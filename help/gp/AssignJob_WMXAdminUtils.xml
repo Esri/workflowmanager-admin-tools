@@ -1,0 +1,52 @@
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20110110</CreaDate>
+    <CreaTime>10394700</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+    <ModDate>20110127</ModDate>
+    <ModTime>10154900</ModTime>
+  </Esri>
+  <tool xmlns="" name="AssignJob" displayname="Assign Job" toolboxalias="WMXAdminUtils" softwarerestriction="none">
+    <summary>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool provides a mechanism for assigning a job to a user, a group, or to no one (i.e. unassigned).&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</summary>
+    <usage>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The default Workflow Manager database must be set before running this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The user must be a member of a group with at least one of the privileges related to assigning jobs.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</usage>
+    <parameters>
+      <param sync="true" name="in_long_jobId" displayname="ID of the job to assign" datatype="Long" direction="Input" expression="in_long_jobId" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The ID of the job to be assigned.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on those jobs present in the Workflow Manager database that can be reassigned.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The ID of the job to be assigned.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on those jobs present in the Workflow Manager database that can be reassigned.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_assigneeType" displayname="ID of the job to assign" datatype="String" direction="Input" expression="in_string_assigneeType" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Jobs can be assigned to groups, individual users, or to no one.  This parameter allows you to select which of these the job will be assigned to:&lt;/SPAN&gt;&lt;/P&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;ASSIGN_TO_GROUP&lt;/SPAN&gt;&lt;SPAN&gt; - Sets up the tool to assign the selected job to one of the Workflow Manager groups.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;ASSIGN_TO_USER&lt;/SPAN&gt;&lt;SPAN&gt; - Sets up the tool to assign the selected job to one of the Workflow Manager users.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;UNASSIGNED&lt;/SPAN&gt;&lt;SPAN&gt; - Assigns the job to no one.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;P&gt;&lt;SPAN&gt;For further information about job assignments, please consult the Workflow Manager documentation.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Jobs can be assigned to groups, individual users, or to no one.  This parameter allows you to select which of these the job will be assigned to:&lt;/SPAN&gt;&lt;/P&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;ASSIGN_TO_GROUP&lt;/SPAN&gt;&lt;SPAN&gt; - Sets up the tool to assign the selected job to one of the Workflow Manager groups.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;ASSIGN_TO_USER&lt;/SPAN&gt;&lt;SPAN&gt; - Sets up the tool to assign the selected job to one of the Workflow Manager users.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;UNASSIGNED&lt;/SPAN&gt;&lt;SPAN&gt; - Assigns the job to no one.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;P&gt;&lt;SPAN&gt;For further information about job assignments, please consult the Workflow Manager documentation.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_assignee" displayname="ID of the job to assign" datatype="String" direction="Input" expression="in_string_assignee" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the user or group to whom the job is to be assigned.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is populated based on the type of assignee selected, and the groups or users present in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;If the assignee type is "UNASSIGNED", this parameter is not used or required.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the user or group to whom the job is to be assigned.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is populated based on the type of assignee selected, and the groups or users present in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;If the assignee type is "UNASSIGNED", this parameter is not used or required.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_wmxDatabaseAlias" displayname="Workflow Manager database alias" datatype="String" direction="Input" expression="in_string_wmxDatabaseAlias" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool provides a mechanism for assigning a job to a user, a group, or to no one (i.e. unassigned).&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs>
+    <idCitation>
+      <resTitle>Assign Job</resTitle>
+    </idCitation>
+    <searchKeys>
+      <keyword>assign</keyword>
+      <keyword>reassign</keyword>
+      <keyword>assignment</keyword>
+      <keyword>assignee</keyword>
+      <keyword>set</keyword>
+      <keyword>user</keyword>
+      <keyword>group</keyword>
+      <keyword>job</keyword>
+      <keyword>workflow</keyword>
+      <keyword>task</keyword>
+    </searchKeys>
+  </dataIdInfo>
+  <mdDateSt>20110127</mdDateSt>
+</metadata>

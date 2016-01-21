@@ -1,0 +1,46 @@
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20110104</CreaDate>
+    <CreaTime>12215300</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool xmlns="" name="AddDatasetConditionToSN" displayname="Add Dataset Condition to Spatial Notification" toolboxalias="WMXAdminUtils" softwarerestriction="none">
+    <summary>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool provides a way to set the "administrative access" flag for individual users in a Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</summary>
+    <usage>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The default Workflow Manager database must be set before running this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The user running this tool must have administrative access to the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</usage>
+    <parameters>
+      <param sync="true" name="in_string_userName" displayname="User name" datatype="String" direction="Input" expression="in_string_userName" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The username for the account to have its administrative access granted/revoked.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on the usernames in the Workflow Manager database.  You can also select the wildcard "[All]" to apply the specified changes to every user account in the database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The username for the account to have its administrative access granted/revoked.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on the usernames in the Workflow Manager database.  You can also select the wildcard "[All]" to apply the specified changes to every user account in the database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_privilegeAction" displayname="Specifies whether to grant or revoke adminstrator access for the given user(s)" datatype="String" direction="Input" expression="in_string_privilegeAction" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Selects whether administrative access is to be granted or revoked.&lt;/SPAN&gt;&lt;/P&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;GRANT&lt;/SPAN&gt;&lt;SPAN&gt; - Grants administrative access to the DB.  Users who already have administrative access are unaffected.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;REVOKE&lt;/SPAN&gt;&lt;SPAN&gt; - Revokes administrative access to the DB.  Users who do not have administrative access are unaffected.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Selects whether administrative access is to be granted or revoked.&lt;/SPAN&gt;&lt;/P&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;GRANT&lt;/SPAN&gt;&lt;SPAN&gt; - Grants administrative access to the DB.  Users who already have administrative access are unaffected.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;REVOKE&lt;/SPAN&gt;&lt;SPAN&gt; - Revokes administrative access to the DB.  Users who do not have administrative access are unaffected.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_bool_preserveCurrentUser" displayname="Preserve the executing user's administrative access to the DB" datatype="Boolean" direction="Input" expression="in_bool_preserveCurrentUser" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Since the current user must have administrative access to the database in order for this tool to work, setting this flag will ensure that they retain this access once the tool has finished running.  (Only applies when admin access is being revoked.)&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;When running this tool from a script, the possible values for this parameter are:&lt;/SPAN&gt;&lt;/P&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;PRESERVE / true&lt;/SPAN&gt;&lt;SPAN&gt; - Maintains the current user's administrative access to the database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;NO_PRESERVE / false&lt;/SPAN&gt;&lt;SPAN&gt; - Allows the tool to run as specified, possibly revoking the current user's administrative access to the database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Since the current user must have administrative access to the database in order for this tool to work, setting this flag will ensure that they retain this access once the tool has finished running.  (Only applies when admin access is being revoked.)&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;When running this tool from a script, the possible values for this parameter are:&lt;/SPAN&gt;&lt;/P&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;PRESERVE / true&lt;/SPAN&gt;&lt;SPAN&gt; - Maintains the current user's administrative access to the database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;NO_PRESERVE / false&lt;/SPAN&gt;&lt;SPAN&gt; - Allows the tool to run as specified, possibly revoking the current user's administrative access to the database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_wmxDatabaseAlias" displayname="Workflow Manager database alias" datatype="String" direction="Input" expression="in_string_wmxDatabaseAlias" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool provides a way to set the "administrative access" flag for individual users in a Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs>
+    <idCitation>
+      <resTitle>Modify Administrator Access</resTitle>
+    </idCitation>
+    <searchKeys>
+      <keyword>modify</keyword>
+      <keyword>change</keyword>
+      <keyword>update</keyword>
+      <keyword>set</keyword>
+      <keyword>administrator</keyword>
+      <keyword>administrative</keyword>
+      <keyword>admin</keyword>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

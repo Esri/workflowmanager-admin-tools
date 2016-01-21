@@ -1,0 +1,69 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace WorkflowManagerAdministrationUtilities
+{
+    class WmauError
+    {
+        private WmauErrorCodes m_errorCode = WmauErrorCodes.C_UNSPECIFIED_ERROR;
+        
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        public WmauError()
+        {
+        }
+
+        /// <summary>
+        /// Constructor; initializes the error object with an error code
+        /// </summary>
+        /// <param name="errorCode">The error code associated with this object</param>
+        public WmauError(WmauErrorCodes errorCode)
+        {
+            this.ErrorCode = errorCode;
+        }
+
+        /// <summary>
+        /// Returns the error message associated with this object's error code
+        /// </summary>
+        public string Message
+        {
+            get
+            {
+                return WmauErrorInfo.GetErrorMsg(m_errorCode);
+            }
+        }
+
+        /// <summary>
+        /// Accessor for the error code associated with this object
+        /// </summary>
+        public WmauErrorCodes ErrorCode
+        {
+            get
+            {
+                return m_errorCode;
+            }
+            set
+            {
+                string msg = WmauErrorInfo.GetErrorMsg(value);
+                if (!string.IsNullOrEmpty(msg))
+                {
+                    m_errorCode = value;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Accessor for the error code associated with this object (provides access as a string)
+        /// </summary>
+        public int ErrorCodeAsInt
+        {
+            get
+            {
+                return (int)m_errorCode;
+            }
+        }
+    }
+}

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2DA73E11-A44C-41AF-8D9D-8880DCB1C8FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WorkflowManagerAdministrationUtilities</RootNamespace>
+    <AssemblyName>WorkflowManagerAdministrationUtilities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.ADF.Connection.Local, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\ArcGIS\DeveloperKit10.4\DotNet\ESRI.ArcGIS.ADF.Connection.Local.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\ArcGIS\DeveloperKit10.4\DotNet\ESRI.ArcGIS.ADF.Local.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\Program Files (x86)\ArcGIS\DeveloperKit10.4\DotNet\ESRI.ArcGIS.Carto.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\Program Files (x86)\ArcGIS\DeveloperKit10.4\DotNet\ESRI.ArcGIS.DataSourcesFile.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\Program Files (x86)\ArcGIS\DeveloperKit10.4\DotNet\ESRI.ArcGIS.Geodatabase.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\Program Files (x86)\ArcGIS\DeveloperKit10.4\DotNet\ESRI.ArcGIS.Geometry.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\Program Files (x86)\ArcGIS\DeveloperKit10.4\DotNet\ESRI.ArcGIS.Geoprocessing.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.JTX, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8603f16c5781c275, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.JTX.Utilities, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8603f16c5781c275, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.JTXUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8603f16c5781c275, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.JTXUI.JTXShared, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8603f16c5781c275, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\Program Files (x86)\ArcGIS\DeveloperKit10.4\DotNet\ESRI.ArcGIS.System.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddAreaEvaluatorToSpatialNotification.cs" />
+    <Compile Include="AddAttachmentToJob.cs" />
+    <Compile Include="AddCommentToJob.cs" />
+    <Compile Include="AddDatasetConditionToSpatialNotification.cs" />
+    <Compile Include="AssignJob.cs" />
+    <Compile Include="CloseJob.cs" />
+    <Compile Include="DeleteDataWorkspace.cs" />
+    <Compile Include="DeleteMapDocument.cs" />
+    <Compile Include="DeleteTaskAssistantWorkbook.cs" />
+    <Compile Include="ExecuteJob.cs" />
+    <Compile Include="ExportDataWorkspacesToExcel.cs" />
+    <Compile Include="ListAllDataWorkspaces.cs" />
+    <Compile Include="ListJobsUsingQuery.cs" />
+    <Compile Include="ReportPossibleErrors.cs" />
+    <Compile Include="SendJobNotification.cs" />
+    <Compile Include="SetDefaultWorkspaceForJobType.cs" />
+    <Compile Include="WmauGpDomainBuilder.cs" />
+    <Compile Include="CreateDataWorkspacesFromExcel.cs" />
+    <Compile Include="CreateJob.cs" />
+    <Compile Include="CreateSpatialNotification.cs" />
+    <Compile Include="CreateSpatialNotification2.cs" />
+    <Compile Include="DeleteJob.cs" />
+    <Compile Include="DownloadMapDocument.cs" />
+    <Compile Include="DownloadTaskAssistantWorkbook.cs" />
+    <Compile Include="ImportActiveDirectoryConfiguration.cs" />
+    <Compile Include="ListUsers.cs" />
+    <Compile Include="ModifyAdministratorAccess.cs" />
+    <Compile Include="ModifyPrivilegeAssignment.cs" />
+    <Compile Include="ListAllMapDocuments.cs" />
+    <Compile Include="ListAllTaskAssistantWorkbooks.cs" />
+    <Compile Include="ListJobs.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WmauError.cs" />
+    <Compile Include="WmauException.cs" />
+    <Compile Include="WmauHelperFunctions.cs" />
+    <Compile Include="WmauParameterMap.cs" />
+    <Compile Include="WmxDefaultDbNotSetException.cs" />
+    <Compile Include="BackupWorkflowManagerDatabase.cs" />
+    <Compile Include="DeleteOrphanedTypes.cs" />
+    <Compile Include="UploadMapDocument.cs" />
+    <Compile Include="WmauErrorInfo.cs" />
+    <Compile Include="WmauFunctionFactory.cs" />
+    <Compile Include="UploadTaskAssistantWorkbook.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkspaceInfo.cs" />
+    <Compile Include="WorkspaceWorksheetReader.cs" />
+    <Compile Include="WmauAbstractGpFunction.cs" />
+    <Compile Include="WorkspaceWorksheetWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  -->
+  <Target Name="BeforeClean">
+    <Exec Command="if exist &quot;$(CommonProgramFiles)\ArcGIS\bin\esriRegAsm.exe&quot; (&quot;$(CommonProgramFiles)\ArcGIS\bin\esriRegAsm.exe&quot; &quot;$(TargetPath)&quot; /p:Desktop /u /s)" Condition="Exists('$(TargetPath)')" />
+    <Exec Command="if exist &quot;$(CommonProgramFiles(x86))\ArcGIS\bin\esriRegAsm.exe&quot; (&quot;$(CommonProgramFiles(x86))\ArcGIS\bin\esriRegAsm.exe&quot; &quot;$(TargetPath)&quot; /p:Desktop /u /s)" Condition="Exists('$(TargetPath)')" />
+    <!-- Commented out by BJD in favor of the separate "exec" commands above for 32 & 64-bit versions of Windows
+    <Exec Command="esriRegasm.exe &quot;$(TargetPath)&quot; /p:Desktop /u /s" Condition="Exists('$(TargetPath)')" />
+    -->
+  </Target>
+  <Target Name="AfterBuild">
+    <Exec Command="if exist &quot;$(CommonProgramFiles)\ArcGIS\bin\esriRegAsm.exe&quot; (&quot;$(CommonProgramFiles)\ArcGIS\bin\esriRegAsm.exe&quot; &quot;$(TargetPath)&quot; /p:Desktop /s)" Condition="Exists('$(TargetPath)')" />
+    <Exec Command="if exist &quot;$(CommonProgramFiles(x86))\ArcGIS\bin\esriRegAsm.exe&quot; (&quot;$(CommonProgramFiles(x86))\ArcGIS\bin\esriRegAsm.exe&quot; &quot;$(TargetPath)&quot; /p:Desktop /s)" Condition="Exists('$(TargetPath)')" />
+    <!-- Commented out by BJD in favor of the separate "exec" commands above for 32 & 64-bit versions of Windows
+    <Exec WorkingDirectory="$(CommonProgramFiles)\ArcGIS\bin" Command="esriRegasm.exe &quot;$(TargetPath)&quot; /p:Desktop" />
+    -->
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

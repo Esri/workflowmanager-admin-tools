@@ -1,0 +1,41 @@
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20101220</CreaDate>
+    <CreaTime>14345500</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool xmlns="" name="ListJobs" displayname="List Jobs" toolboxalias="WMXAdminUtils" softwarerestriction="none">
+    <summary>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool returns the job IDs for all of the jobs matching the query. A blank query will cause all jobs to be returned. The job IDs are returned as a list of longs in a MultiValue GP output.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</summary>
+    <usage>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The default Workflow Manager database must be set before running this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</usage>
+    <parameters>
+      <param sync="true" name="in_table_jobsTable" displayname="Path to Jobs Table" datatype="Table" direction="Input" expression="in_table_jobsTable" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;P&gt;&lt;SPAN&gt;The full path to the Workflow Manager table containing the job information.  The underlying database must be the same as the default Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;P&gt;&lt;SPAN&gt;The full path to the Workflow Manager table containing the job information.  The underlying database must be the same as the default Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_sqlQueryFilter" displayname="SQL query" datatype="SQLQuery" direction="Input" expression="in_string_sqlQueryFilter" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The SQL query used to narrow down the selection of job IDs to be returned.  A blank query will result in all job IDs being returned.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The SQL query used to narrow down the selection of job IDs to be returned.  A blank query will result in all job IDs being returned.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_wmxDatabaseAlias" displayname="Workflow Manager database alias" datatype="String" direction="Input" expression="in_string_wmxDatabaseAlias" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool returns the job IDs for all of the jobs matching the query. A blank query will cause all jobs to be returned. The job IDs are returned as a list of longs in a MultiValue GP output.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs>
+    <idCitation>
+      <resTitle>List Jobs</resTitle>
+    </idCitation>
+    <searchKeys>
+      <keyword>list</keyword>
+      <keyword>jobs</keyword>
+      <keyword>job</keyword>
+      <keyword>show</keyword>
+      <keyword>workflow</keyword>
+      <keyword>workflows</keyword>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

@@ -1,0 +1,50 @@
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20110111</CreaDate>
+    <CreaTime>14373700</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+    <ModDate>20110127</ModDate>
+    <ModTime>10135900</ModTime>
+  </Esri>
+  <tool xmlns=""  name="AddAttachmentToJob" displayname="Add Attachment to Job" toolboxalias="WMXAdminUtils" softwarerestriction="none">
+    <summary>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This tool provides a way to attach a file to a Workflow Manager job.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Note that for any jobs with an active hold, the user running the tool will need to have the privilege to override the hold and add an attachment to the held job.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</summary>
+    <usage>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The default Workflow Manager database must be set before running this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;At a minimum, the user running this tool must be a member of a group with the privilege to manage job attachments.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</usage>
+    <parameters>
+      <param sync="true" name="in_long_jobId" displayname="ID of the job to which the attachment will be added" datatype="Long" direction="Input" expression="in_long_jobId" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The ID of the job to which the attachment will be added.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on those jobs present in the Workflow Manager database that are able to have attachments added to them.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The ID of the job to which the attachment will be added.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on those jobs present in the Workflow Manager database that are able to have attachments added to them.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_file_attachment" displayname="File to be attached to the job" datatype="File" direction="Input" expression="in_file_attachment" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This parameter should contain the full path to the file to be attached to the specified job.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This parameter should contain the full path to the file to be attached to the specified job.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_attachmentType" displayname="How the file should be attached to the job" datatype="String" direction="Input" expression="in_string_attachmentType" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Workflow Manager supports different ways in which an attachment can be associated with a job.  This parameter allows you to specify how the attachment is associated with a job.  The available options are:&lt;/SPAN&gt;&lt;/P&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;EMBEDDED&lt;/SPAN&gt;&lt;SPAN&gt; - Uploads the file into the Workflow Manager database itself.  This is generally better-suited to smaller files.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;LINKED&lt;/SPAN&gt;&lt;SPAN&gt; - Adds a reference to the file -- with the path used in the previous argument -- to the job.  This associates a job with a file without actually uploading the file into the Workflow Manager database, and so is suitable for files of any size.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;P&gt;&lt;SPAN&gt;Please refer to the Workflow Manager documentation for further information about these options and the various tradeoffs.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Workflow Manager supports different ways in which an attachment can be associated with a job.  This parameter allows you to specify how the attachment is associated with a job.  The available options are:&lt;/SPAN&gt;&lt;/P&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;EMBEDDED&lt;/SPAN&gt;&lt;SPAN&gt; - Uploads the file into the Workflow Manager database itself.  This is generally better-suited to smaller files.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;LINKED&lt;/SPAN&gt;&lt;SPAN&gt; - Adds a reference to the file -- with the path used in the previous argument -- to the job.  This associates a job with a file without actually uploading the file into the Workflow Manager database, and so is suitable for files of any size.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;P&gt;&lt;SPAN&gt;Please refer to the Workflow Manager documentation for further information about these options and the various tradeoffs.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_wmxDatabaseAlias" displayname="Workflow Manager database alias" datatype="String" direction="Input" expression="in_string_wmxDatabaseAlias" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This tool provides a way to attach a file to a Workflow Manager job.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Note that for any jobs with an active hold, the user running the tool will need to have the privilege to override the hold and add an attachment to the held job.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs>
+    <idCitation>
+      <resTitle>Add Attachment to Job</resTitle>
+    </idCitation>
+    <searchKeys>
+      <keyword>add</keyword>
+      <keyword>upload</keyword>
+      <keyword>load</keyword>
+      <keyword>attach</keyword>
+      <keyword>file</keyword>
+      <keyword>attachment</keyword>
+      <keyword>job</keyword>
+      <keyword>workflow</keyword>
+    </searchKeys>
+  </dataIdInfo>
+  <mdDateSt>20110127</mdDateSt>
+</metadata>

@@ -1,0 +1,51 @@
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20101230</CreaDate>
+    <CreaTime>12313800</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool xmlns="" name="CreateSpatialNotificationWithEmailNotifier" displayname="Create Spatial Notification with E-mail Notifier" toolboxalias="WMXAdminUtils" softwarerestriction="none">
+    <summary>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool creates a new spatial notification with an e-mail notification mechanism. The e-mail notifier used by the spatial notification is based on one of the existing (non-spatial) e-mail notifications in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;IMPORTANT NOTE&lt;/SPAN&gt;&lt;SPAN&gt;: This tool does NOT add an area evaluator or dataset condition evaluator to the spatial notification that is created; this must be done separately using the "Add Area Evaluator to Spatial Notification" and/or the "Add Dataset Condition to Spatial Notification" GP tools. At least one of these tools MUST be run following the creation of every spatial notification. Also note that the "Add..." GP tools MUST be used to add these components to the spatial notification; using the Workflow Manager Administrator to do so could result in corruption of your Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</summary>
+    <usage>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The default Workflow Manager database must be set before running this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The user running this tool must have administrative access to the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</usage>
+    <parameters>
+      <param sync="true" name="in_string_name" displayname="Name of new spatial notification" datatype="String" direction="Input" expression="in_string_name" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the spatial notification to be created in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the spatial notification to be created in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_emailNotifier" displayname="E-mail notification type to use as a template for the spatial notification's e-mail" datatype="String" direction="Input" expression="in_string_emailNotifier" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the e-mail notification containing the "template" information to create this spatial notification.  (The spatial notification's sender, subject, body, recipients, etc. are all copied from this e-mail notification.)&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on the names of the (non-spatial) notifications in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;P&gt;&lt;SPAN&gt;The name of the e-mail notification containing the "template" information to create this spatial notification.  (The spatial notification's sender, subject, body, recipients, etc. are all copied from this e-mail notification.)&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on the names of the (non-spatial) notifications in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_description" displayname="Description of new spatial notification" datatype="String" direction="Input" expression="in_string_description" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;A description of the spatial notification rule.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;P&gt;&lt;SPAN&gt;A description of the spatial notification rule.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_bool_summarize" displayname="Summarize multiple changes in a single notification message" datatype="Boolean" direction="Input" expression="in_bool_summarize" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Sets the "summarize" flag on the newly-created spatial notification rule.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;When run from a script, the options are:&lt;/SPAN&gt;&lt;/P&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;SUMMARIZE / true&lt;/SPAN&gt;&lt;SPAN&gt; - Enables summarization for this spatial notification.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;DO_NOT_SUMMARIZE / false&lt;/SPAN&gt;&lt;SPAN&gt; - Do not enable summarization.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Sets the "summarize" flag on the newly-created spatial notification rule.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;When run from a script, the options are:&lt;/SPAN&gt;&lt;/P&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;SUMMARIZE / true&lt;/SPAN&gt;&lt;SPAN&gt; - Enables summarization for this spatial notification.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;DO_NOT_SUMMARIZE / false&lt;/SPAN&gt;&lt;SPAN&gt; - Do not enable summarization.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_wmxDatabaseAlias" displayname="Workflow Manager database alias" datatype="String" direction="Input" expression="in_string_wmxDatabaseAlias" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool creates a new spatial notification with an e-mail notification mechanism. The e-mail notifier used by the spatial notification is based on one of the existing (non-spatial) e-mail notifications in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;IMPORTANT NOTE&lt;/SPAN&gt;&lt;SPAN&gt;: This tool does NOT add an area evaluator or dataset condition evaluator to the spatial notification that is created; this must be done separately using the "Add Area Evaluator to Spatial Notification" and/or the "Add Dataset Condition to Spatial Notification" GP tools. At least one of these tools MUST be run following the creation of every spatial notification. Also note that the "Add..." GP tools MUST be used to add these components to the spatial notification; using the Workflow Manager Administrator to do so could result in corruption of your Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs>
+    <idCitation>
+      <resTitle>Create Spatial Notification with E-mail Notifier</resTitle>
+    </idCitation>
+    <searchKeys>
+      <keyword>create</keyword>
+      <keyword>make</keyword>
+      <keyword>add</keyword>
+      <keyword>spatial</keyword>
+      <keyword>notification</keyword>
+      <keyword>notifier</keyword>
+      <keyword>e-mail</keyword>
+      <keyword>email</keyword>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

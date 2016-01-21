@@ -1,0 +1,53 @@
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20110104</CreaDate>
+    <CreaTime>13401100</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool xmlns="" name="ModifyPrivilegeAssignment" displayname="Modify Privilege Assignment" toolboxalias="WMXAdminUtils" softwarerestriction="none">
+    <summary>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool provides a way to grant or revoke privileges to groups in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</summary>
+    <usage>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The default Workflow Manager database must be set before running this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The user running this tool must have administrative access to the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</usage>
+    <parameters>
+      <param sync="true" name="in_string_privilegeName" displayname="Privilege name" datatype="String" direction="Input" expression="in_string_privilegeName" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the privilege to be granted or revoked.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this paramter is based on the privileges present in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;NOTE&lt;/SPAN&gt;&lt;SPAN&gt;: The special value "[All]" may be used to select all privileges in the database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the privilege to be granted or revoked.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this paramter is based on the privileges present in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;NOTE&lt;/SPAN&gt;&lt;SPAN&gt;: The special value "[All]" may be used to select all privileges in the database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_groupName" displayname="Group name" datatype="String" direction="Input" expression="in_string_groupName" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the group for whom the privilege should be granted or revoked.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on the groups in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;NOTE&lt;/SPAN&gt;&lt;SPAN&gt;: The special value "[All]" may be used to apply a privilege change to all groups in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the group for whom the privilege should be granted or revoked.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on the groups in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;NOTE&lt;/SPAN&gt;&lt;SPAN&gt;: The special value "[All]" may be used to apply a privilege change to all groups in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_privilegeAction" displayname="Specifies whether to grant or revoke the specified privilege(s) for the given group(s)" datatype="String" direction="Input" expression="in_string_privilegeAction" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The parameter indicating whether the specified privilege(s) should be granted to or revoked from the specified group(s).&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;When running this tool from a script, the available options are:&lt;/SPAN&gt;&lt;/P&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;GRANT&lt;/SPAN&gt;&lt;SPAN&gt; - Grant the privilege(s) as specified.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;REVOKE&lt;/SPAN&gt;&lt;SPAN&gt; - Remove the privilege(s) as specified.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The parameter indicating whether the specified privilege(s) should be granted to or revoked from the specified group(s).&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;When running this tool from a script, the available options are:&lt;/SPAN&gt;&lt;/P&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;GRANT&lt;/SPAN&gt;&lt;SPAN&gt; - Grant the privilege(s) as specified.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN STYLE="font-weight:bold;"&gt;REVOKE&lt;/SPAN&gt;&lt;SPAN&gt; - Remove the privilege(s) as specified.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_wmxDatabaseAlias" displayname="Workflow Manager database alias" datatype="String" direction="Input" expression="in_string_wmxDatabaseAlias" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This GP tool provides a way to grant or revoke privileges to groups in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs>
+    <idCitation>
+      <resTitle>Modify Privilege Assignment</resTitle>
+    </idCitation>
+    <searchKeys>
+      <keyword>modify</keyword>
+      <keyword>change</keyword>
+      <keyword>set</keyword>
+      <keyword>unset</keyword>
+      <keyword>update</keyword>
+      <keyword>apply</keyword>
+      <keyword>privilege</keyword>
+      <keyword>privileges</keyword>
+      <keyword>right</keyword>
+      <keyword>rights</keyword>
+      <keyword>permission</keyword>
+      <keyword>permissions</keyword>
+      <keyword>group</keyword>
+      <keyword>groups</keyword>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>

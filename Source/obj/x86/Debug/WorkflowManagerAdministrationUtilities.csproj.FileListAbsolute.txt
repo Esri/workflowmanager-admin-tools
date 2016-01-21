@@ -1,0 +1,8 @@
+C:\WMX\WorkflowManagerAdministrationUtilities\bin\WorkflowManagerAdministrationUtilities.dll
+C:\WMX\WorkflowManagerAdministrationUtilities\bin\WorkflowManagerAdministrationUtilities.pdb
+C:\WMX\WorkflowManagerAdministrationUtilities\bin\WorkflowManagerAdministrationUtilities.tlb
+C:\WMX\WorkflowManagerAdministrationUtilities\Source\obj\x86\Debug\WorkflowManagerAdministrationUtilities.csprojResolveAssemblyReference.cache
+C:\WMX\WorkflowManagerAdministrationUtilities\Source\obj\x86\Debug\WorkflowManagerAdministrationUtilities.Properties.Resources.resources
+C:\WMX\WorkflowManagerAdministrationUtilities\Source\obj\x86\Debug\WorkflowManagerAdministrationUtilities.csproj.GenerateResource.Cache
+C:\WMX\WorkflowManagerAdministrationUtilities\Source\obj\x86\Debug\WorkflowManagerAdministrationUtilities.dll
+C:\WMX\WorkflowManagerAdministrationUtilities\Source\obj\x86\Debug\WorkflowManagerAdministrationUtilities.pdb

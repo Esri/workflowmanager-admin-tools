@@ -1,0 +1,770 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CAT_DATA_WORKSPACE_UTILS" xml:space="preserve">
+    <value>Data Workspaces</value>
+  </data>
+  <data name="CAT_JOB_UTILS" xml:space="preserve">
+    <value>Jobs</value>
+  </data>
+  <data name="CAT_MXD_UTILS" xml:space="preserve">
+    <value>Map Documents</value>
+  </data>
+  <data name="CAT_NOTIFICATION_UTILS" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="CAT_SECURITY_UTILS" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="CAT_TAM_UTILS" xml:space="preserve">
+    <value>Task Assistant Workbooks</value>
+  </data>
+  <data name="CAT_WMX_DB_UTILS" xml:space="preserve">
+    <value>Workflow Manager Database</value>
+  </data>
+  <data name="CONST_JOB_QUERY_SEP" xml:space="preserve">
+    <value>|</value>
+  </data>
+  <data name="DESC_AAE_ALTERNATE_AOI" xml:space="preserve">
+    <value>Area of Interest (polygon layer with exactly one selected feature)</value>
+  </data>
+  <data name="DESC_AAE_GEOMETRIC_OPERATION" xml:space="preserve">
+    <value>Geometric operation (ex: notifier AOI &lt;xxx&gt; feature)</value>
+  </data>
+  <data name="DESC_AAE_SPATIAL_NOTIFICATION" xml:space="preserve">
+    <value>Name of Spatial Notification</value>
+  </data>
+  <data name="DESC_AAE_SPATIAL_NOTIFICATION_OUT" xml:space="preserve">
+    <value>Name of Spatial Notification (output)</value>
+  </data>
+  <data name="DESC_AAE_USE_INVERSE" xml:space="preserve">
+    <value>Use the inverse of the geometric operation above (ex: notifier AOI does not &lt;xxx&gt; feature)</value>
+  </data>
+  <data name="DESC_AAE_USE_JOB_AOI" xml:space="preserve">
+    <value>Use the AOI of the job being worked as the notifier AOI</value>
+  </data>
+  <data name="DESC_AA_ATTACHMENT" xml:space="preserve">
+    <value>File to be attached to the job</value>
+  </data>
+  <data name="DESC_AA_ATTACHMENT_TYPE" xml:space="preserve">
+    <value>How the file should be attached to the job</value>
+  </data>
+  <data name="DESC_AA_JOB_ID" xml:space="preserve">
+    <value>ID of the job to which the attachment will be added</value>
+  </data>
+  <data name="DESC_AA_OUT_JOB_ID" xml:space="preserve">
+    <value>ID of the job to which the attachment was added (output)</value>
+  </data>
+  <data name="DESC_ACTJ_COMMENT" xml:space="preserve">
+    <value>The comment to be added to the job</value>
+  </data>
+  <data name="DESC_ACTJ_JOB_ID" xml:space="preserve">
+    <value>ID of the job to which the comment will be added</value>
+  </data>
+  <data name="DESC_ACTJ_OUT_JOB_ID" xml:space="preserve">
+    <value>ID of the job to which the comment was added (output)</value>
+  </data>
+  <data name="DESC_ADC_CHANGE_CONDITION" xml:space="preserve">
+    <value>Change condition (how/when to check the where clauses)</value>
+  </data>
+  <data name="DESC_ADC_COLUMNS" xml:space="preserve">
+    <value>Columns to monitor</value>
+  </data>
+  <data name="DESC_ADC_DATA_WORKSPACE" xml:space="preserve">
+    <value>Workflow Manager Data Workspace</value>
+  </data>
+  <data name="DESC_ADC_FEATURE_CLASS" xml:space="preserve">
+    <value>Feature class to monitor</value>
+  </data>
+  <data name="DESC_ADC_MONITOR_ALL_COLUMNS" xml:space="preserve">
+    <value>Monitor all columns for changes</value>
+  </data>
+  <data name="DESC_ADC_SPATIAL_NOTIFICATION" xml:space="preserve">
+    <value>Name of Spatial Notification</value>
+  </data>
+  <data name="DESC_ADC_SPATIAL_NOTIFICATION_OUT" xml:space="preserve">
+    <value>Name of Spatial Notification (output)</value>
+  </data>
+  <data name="DESC_ADC_TRY_EXISTING_EVALUATOR" xml:space="preserve">
+    <value>Use/add to an existing dataset evaluator, if one is available</value>
+  </data>
+  <data name="DESC_ADC_VT_ATTRIBUTE" xml:space="preserve">
+    <value>Attribute (from the selected feature class)</value>
+  </data>
+  <data name="DESC_ADC_VT_OPERATOR" xml:space="preserve">
+    <value>Operator ( &lt;, &lt;=, &gt;, &gt;=, =, &lt;&gt;, or Contains )</value>
+  </data>
+  <data name="DESC_ADC_VT_VALUE" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="DESC_ADC_WHERE_CLAUSES" xml:space="preserve">
+    <value>Conditions to monitor (a.k.a. where clauses)</value>
+  </data>
+  <data name="DESC_AJ_ASSIGNEE" xml:space="preserve">
+    <value>User or group name of assignee</value>
+  </data>
+  <data name="DESC_AJ_ASSIGNEE_TYPE" xml:space="preserve">
+    <value>Type of assignment to make</value>
+  </data>
+  <data name="DESC_AJ_JOB_ID" xml:space="preserve">
+    <value>ID of job to assign</value>
+  </data>
+  <data name="DESC_AJ_OUT_JOB_ID" xml:space="preserve">
+    <value>ID of job assigned (output)</value>
+  </data>
+  <data name="DESC_BW_JXL_FILE_PATH" xml:space="preserve">
+    <value>Target .jxl file</value>
+  </data>
+  <data name="DESC_BW_PRETTY_PRINT" xml:space="preserve">
+    <value>Pretty-print output file</value>
+  </data>
+  <data name="DESC_CDW_ERROR_BEHAVIOR" xml:space="preserve">
+    <value>Behavior on error</value>
+  </data>
+  <data name="DESC_CDW_EXCEL_FILE_PATH" xml:space="preserve">
+    <value>Source Workbook (Microsoft Excel)</value>
+  </data>
+  <data name="DESC_CDW_WORKSPACES_CREATED" xml:space="preserve">
+    <value>Workspaces created (output)</value>
+  </data>
+  <data name="DESC_CJ_AOI" xml:space="preserve">
+    <value>Area of interest (polygon layer with exactly one selected feature)</value>
+  </data>
+  <data name="DESC_CJ_ASSIGNEE" xml:space="preserve">
+    <value>Name of assignee</value>
+  </data>
+  <data name="DESC_CJ_ASSIGNEE_TYPE" xml:space="preserve">
+    <value>Type of assignee</value>
+  </data>
+  <data name="DESC_CJ_DATA_WORKSPACE" xml:space="preserve">
+    <value>Workflow Manager data workspace</value>
+  </data>
+  <data name="DESC_CJ_DUE_DATE" xml:space="preserve">
+    <value>Due date (mm/dd/yyyy)</value>
+  </data>
+  <data name="DESC_CJ_EXECUTE_NEW_JOB" xml:space="preserve">
+    <value>Execute new job after creation</value>
+  </data>
+  <data name="DESC_CJ_JOB_OWNER" xml:space="preserve">
+    <value>Job owner (username)</value>
+  </data>
+  <data name="DESC_CJ_JOB_TYPE" xml:space="preserve">
+    <value>Type of job to create</value>
+  </data>
+  <data name="DESC_CJ_OUTPUT_JOB_ID" xml:space="preserve">
+    <value>ID of newly-created job</value>
+  </data>
+  <data name="DESC_CJ_PARENT_JOB_ID" xml:space="preserve">
+    <value>Parent job ID</value>
+  </data>
+  <data name="DESC_CJ_PARENT_VERSION" xml:space="preserve">
+    <value>Parent version</value>
+  </data>
+  <data name="DESC_CJ_PRIORITY" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="DESC_CJ_START_DATE" xml:space="preserve">
+    <value>Start date (mm/dd/yyyy)</value>
+  </data>
+  <data name="DESC_CLJ_JOB_CLOSED" xml:space="preserve">
+    <value>ID of job that was closed (output)</value>
+  </data>
+  <data name="DESC_CLJ_JOB_TO_CLOSE" xml:space="preserve">
+    <value>ID of job to close</value>
+  </data>
+  <data name="DESC_COM_WMX_DATABASE" xml:space="preserve">
+    <value>Workflow Manager database alias</value>
+  </data>
+  <data name="DESC_CSN2_DESCRIPTION" xml:space="preserve">
+    <value>Description of new spatial notification</value>
+  </data>
+  <data name="DESC_CSN2_MESSAGE" xml:space="preserve">
+    <value>Body of the e-mail message</value>
+  </data>
+  <data name="DESC_CSN2_NAME" xml:space="preserve">
+    <value>Name of new spatial notification</value>
+  </data>
+  <data name="DESC_CSN2_OUT_NAME" xml:space="preserve">
+    <value>Name of new spatial notification (output)</value>
+  </data>
+  <data name="DESC_CSN2_SENDER_EMAIL" xml:space="preserve">
+    <value>E-mail address to be used for the sender (default uses Workflow Manager system notification settings)</value>
+  </data>
+  <data name="DESC_CSN2_SENDER_NAME" xml:space="preserve">
+    <value>Name to be used for the sender (default uses Workflow Manager system notification settings)</value>
+  </data>
+  <data name="DESC_CSN2_SUBJECT" xml:space="preserve">
+    <value>Subject line for the e-mail notification</value>
+  </data>
+  <data name="DESC_CSN2_SUBSCRIBERS" xml:space="preserve">
+    <value>Recipient list for the notification (tokens are allowed; use semicolons to delimit names)</value>
+  </data>
+  <data name="DESC_CSN2_SUMMARIZE" xml:space="preserve">
+    <value>Summarize multiple changes in a single notification message</value>
+  </data>
+  <data name="DESC_CSN_DESCRIPTION" xml:space="preserve">
+    <value>Description of new spatial notification</value>
+  </data>
+  <data name="DESC_CSN_EMAIL_NOTIFIER" xml:space="preserve">
+    <value>E-mail notification type to use as a template for the spatial notification's e-mail</value>
+  </data>
+  <data name="DESC_CSN_NAME" xml:space="preserve">
+    <value>Name of new spatial notification</value>
+  </data>
+  <data name="DESC_CSN_OUT_NAME" xml:space="preserve">
+    <value>Name of new spatial notification (output)</value>
+  </data>
+  <data name="DESC_CSN_SUMMARIZE" xml:space="preserve">
+    <value>Summarize multiple changes in a single notification message</value>
+  </data>
+  <data name="DESC_DDW_DATA_WORKSPACE" xml:space="preserve">
+    <value>Name of data workspace to be deleted</value>
+  </data>
+  <data name="DESC_DDW_OUT_DATA_WORKSPACE" xml:space="preserve">
+    <value>Name of deleted workspace</value>
+  </data>
+  <data name="DESC_DELMXD_MAP_DOCUMENT" xml:space="preserve">
+    <value>Map document to be deleted from the Workflow Manager database</value>
+  </data>
+  <data name="DESC_DELMXD_OUT_MAP_DOCUMENT" xml:space="preserve">
+    <value>The map document that was deleted</value>
+  </data>
+  <data name="DESC_DELTAM_OUT_WORKBOOK" xml:space="preserve">
+    <value>The Task Assistant workbook that was deleted</value>
+  </data>
+  <data name="DESC_DELTAM_WORKBOOK" xml:space="preserve">
+    <value>Task Assistant workbook to be deleted from the Workflow Manager database</value>
+  </data>
+  <data name="DESC_DJ_JOB_DELETED" xml:space="preserve">
+    <value>ID of job that was deleted (output)</value>
+  </data>
+  <data name="DESC_DJ_JOB_TO_DELETE" xml:space="preserve">
+    <value>ID of job to delete</value>
+  </data>
+  <data name="DESC_DMXD_MXD_FILE_PATH" xml:space="preserve">
+    <value>Target Map Document (path to output MXD file)</value>
+  </data>
+  <data name="DESC_DMXD_SOURCE_NAME" xml:space="preserve">
+    <value>Source Name (name of MXD to retrieve from database)</value>
+  </data>
+  <data name="DESC_DOT_CHECKLIST" xml:space="preserve">
+    <value>List of orphaned types for which to check</value>
+  </data>
+  <data name="DESC_DOT_NUM_ITEMS_DELETED" xml:space="preserve">
+    <value>Total number of items deleted (output)</value>
+  </data>
+  <data name="DESC_DOT_PREVIEW_CHANGES" xml:space="preserve">
+    <value>Preview changes (do not actually delete any items)</value>
+  </data>
+  <data name="DESC_DTAM_SOURCE_NAME" xml:space="preserve">
+    <value>Source Name (name of TA workbook to retrieve from database)</value>
+  </data>
+  <data name="DESC_DTAM_XML_FILE_PATH" xml:space="preserve">
+    <value>Target Workbook (path to output Task Assistant workbook XML file)</value>
+  </data>
+  <data name="DESC_EDW_EXCEL_FILE_PATH" xml:space="preserve">
+    <value>Target workbook (Microsoft Excel)</value>
+  </data>
+  <data name="DESC_EJ_JOB_ID" xml:space="preserve">
+    <value>ID of job to execute</value>
+  </data>
+  <data name="DESC_EJ_OUT_JOB_ID" xml:space="preserve">
+    <value>ID of executed job (output)</value>
+  </data>
+  <data name="DESC_IADC_GROUP_GROUP" xml:space="preserve">
+    <value>AD group containing the full list of Workflow Manager groups (which themselves contain user assignments)</value>
+  </data>
+  <data name="DESC_IADC_OUT_NUM_GROUPS" xml:space="preserve">
+    <value>Number of groups imported (output)</value>
+  </data>
+  <data name="DESC_IADC_OUT_NUM_USERS" xml:space="preserve">
+    <value>Number of users imported (output)</value>
+  </data>
+  <data name="DESC_IADC_PRESERVE_CURRENT_USER" xml:space="preserve">
+    <value>Preserve the executing user's login in the database (even if it's removed from the AD)</value>
+  </data>
+  <data name="DESC_IADC_USER_GROUP" xml:space="preserve">
+    <value>AD group containing the full list of Workflow Manager users</value>
+  </data>
+  <data name="DESC_LJUQ_OUT_JOB_IDS" xml:space="preserve">
+    <value>The list of job IDs retrieved by this query</value>
+  </data>
+  <data name="DESC_LJUQ_QUERY_NAME" xml:space="preserve">
+    <value>Name of the query to use</value>
+  </data>
+  <data name="DESC_LJ_JOBS_TABLE_1" xml:space="preserve">
+    <value>Path to {0} table (must match the default WMX DB location)</value>
+    <comment>Expected parameter is jobs table name</comment>
+  </data>
+  <data name="DESC_LJ_JOB_ID_LIST" xml:space="preserve">
+    <value>Job ID List</value>
+  </data>
+  <data name="DESC_LJ_SQL_QUERY_FILTER_1" xml:space="preserve">
+    <value>SQL query (runs against the {0} table)</value>
+    <comment>Expected parameter is jobs table name</comment>
+  </data>
+  <data name="DESC_LMXD_MAP_DOCUMENT_LIST" xml:space="preserve">
+    <value>Map Document List</value>
+  </data>
+  <data name="DESC_LTAM_TAM_WORKBOOK_LIST" xml:space="preserve">
+    <value>Task Assistant Workbook List</value>
+  </data>
+  <data name="DESC_LU_GROUP_NAME" xml:space="preserve">
+    <value>Name of group to list (blank lists all users)</value>
+  </data>
+  <data name="DESC_LU_USER_NAME_LIST" xml:space="preserve">
+    <value>List of users (output)</value>
+  </data>
+  <data name="DESC_LWSP_DATA_WORKSPACE_LIST" xml:space="preserve">
+    <value>List of all data workspaces</value>
+  </data>
+  <data name="DESC_MAA_OUT_USER_NAME" xml:space="preserve">
+    <value>User name (out)</value>
+  </data>
+  <data name="DESC_MAA_PRESERVE_CURRENT_USER" xml:space="preserve">
+    <value>Preserve the executing user's administrative access to the DB</value>
+  </data>
+  <data name="DESC_MAA_PRIVILEGE_ACTION" xml:space="preserve">
+    <value>Specifies whether to grant or revoke adminstrator access for the given user(s)</value>
+  </data>
+  <data name="DESC_MAA_USER_NAME" xml:space="preserve">
+    <value>User name ("[All]" selects all users)</value>
+  </data>
+  <data name="DESC_MPA_GROUP_NAME" xml:space="preserve">
+    <value>Group name ("[All]" selects all groups)</value>
+  </data>
+  <data name="DESC_MPA_OUT_PRIVILEGE_NAME" xml:space="preserve">
+    <value>Privilege name (out)</value>
+  </data>
+  <data name="DESC_MPA_PRIVILEGE_ACTION" xml:space="preserve">
+    <value>Specifies whether to grant or revoke the specified privilege(s) for the given group(s)</value>
+  </data>
+  <data name="DESC_MPA_PRIVILEGE_NAME" xml:space="preserve">
+    <value>Privilege name ("[All]" selects all privileges)</value>
+  </data>
+  <data name="DESC_RPE_CHECKLIST" xml:space="preserve">
+    <value>List of potential problems for which to check</value>
+  </data>
+  <data name="DESC_RPE_OUT_LOG_FILE_PATH" xml:space="preserve">
+    <value>Location of a text file to which problem descriptions will be written</value>
+  </data>
+  <data name="DESC_RPE_OUT_NUM_ISSUES_FOUND" xml:space="preserve">
+    <value>Number of potential problems found by the tool</value>
+  </data>
+  <data name="DESC_SDW_DATA_WORKSPACE" xml:space="preserve">
+    <value>Default data workspace for this job type</value>
+  </data>
+  <data name="DESC_SDW_JOB_TYPE" xml:space="preserve">
+    <value>Job type name</value>
+  </data>
+  <data name="DESC_SDW_OUT_DATA_WORKSPACE" xml:space="preserve">
+    <value>Default data workspace (output)</value>
+  </data>
+  <data name="DESC_SDW_PARENT_VERSION" xml:space="preserve">
+    <value>Default parent version for this job type</value>
+  </data>
+  <data name="DESC_SJN_JOB_ID" xml:space="preserve">
+    <value>ID of job for which the notification will be sent</value>
+  </data>
+  <data name="DESC_SJN_NOTIFICATION_NAME" xml:space="preserve">
+    <value>Name of notification to send</value>
+  </data>
+  <data name="DESC_SJN_OUT_JOB_ID" xml:space="preserve">
+    <value>ID of job for which the notification was sent</value>
+  </data>
+  <data name="DESC_UMXD_DESCRIPTION" xml:space="preserve">
+    <value>Description of the map document (default/unchanged if blank)</value>
+  </data>
+  <data name="DESC_UMXD_MXD_FILE_PATH" xml:space="preserve">
+    <value>Source map document (path to MXD file)</value>
+  </data>
+  <data name="DESC_UMXD_OUT_TARGET_NAME" xml:space="preserve">
+    <value>Name of the map document in the Workflow Manager database after upload (output)</value>
+  </data>
+  <data name="DESC_UMXD_OVERWRITE_EXISTING" xml:space="preserve">
+    <value>Overwrite existing map documents of the same name</value>
+  </data>
+  <data name="DESC_UMXD_TARGET_CATEGORY" xml:space="preserve">
+    <value>Category in which to store the map document (default/unchanged if blank)</value>
+  </data>
+  <data name="DESC_UMXD_TARGET_NAME" xml:space="preserve">
+    <value>Name of the map document in the Workflow Manager database after upload</value>
+  </data>
+  <data name="DESC_UTAM_OUT_TARGET_NAME" xml:space="preserve">
+    <value>Name of the TAM workbook in the Workflow Manager database after upload (output)</value>
+  </data>
+  <data name="DESC_UTAM_OVERWRITE_EXISTING" xml:space="preserve">
+    <value>Overwrite existing workbooks of the same name</value>
+  </data>
+  <data name="DESC_UTAM_TARGET_NAME" xml:space="preserve">
+    <value>Name of the TAM workbook in Workflow Manager database after upload</value>
+  </data>
+  <data name="DESC_UTAM_XML_FILE_PATH" xml:space="preserve">
+    <value>Source workbook (path to Task Assistant workbook XML file)</value>
+  </data>
+  <data name="ERROR" xml:space="preserve">
+    <value>ERROR</value>
+  </data>
+  <data name="ERROR_ADD_AREA_EVALUATOR" xml:space="preserve">
+    <value>Problem adding an area evaluator to the specified spatial notifier</value>
+  </data>
+  <data name="ERROR_ADD_DATASET_CONDITION" xml:space="preserve">
+    <value>Problem adding a dataset condition to the specified spatial notifier/dataset evaluator</value>
+  </data>
+  <data name="ERROR_AOI_INPUT" xml:space="preserve">
+    <value>General problem wirh AOI layer; ensure that it is an in-memory layer (not a feature class), that any DB connection is valid, etc.</value>
+  </data>
+  <data name="ERROR_AOI_NOT_POLYGON" xml:space="preserve">
+    <value>Only polygon features may be used for AOI definition</value>
+  </data>
+  <data name="ERROR_AOI_OVERLAP" xml:space="preserve">
+    <value>Proposed job AOI overlaps with one or more existing jobs (not allowed by system policy)</value>
+  </data>
+  <data name="ERROR_CANNOT_CLOSE_JOB" xml:space="preserve">
+    <value>The specified job cannot be closed at this time</value>
+  </data>
+  <data name="ERROR_CREATE_JOB" xml:space="preserve">
+    <value>Problem creating the job</value>
+  </data>
+  <data name="ERROR_DELETE_JOB" xml:space="preserve">
+    <value>Problem deleting the job</value>
+  </data>
+  <data name="ERROR_DELETE_JOB_VERSION" xml:space="preserve">
+    <value>Problem deleting the job's version</value>
+  </data>
+  <data name="ERROR_DELETE_MXD" xml:space="preserve">
+    <value>Problem deleting the specified map document from the Workflow Manager database</value>
+  </data>
+  <data name="ERROR_DELETE_TAM" xml:space="preserve">
+    <value>Problem deleting the specified Task Assistant workbook from the Workflow Manager database</value>
+  </data>
+  <data name="ERROR_DUE_DATE_LT_START_DATE" xml:space="preserve">
+    <value>Due date cannot be earlier than the start date</value>
+  </data>
+  <data name="ERROR_EXCEL_WORKBOOK" xml:space="preserve">
+    <value>Problem opening the Excel workbook</value>
+  </data>
+  <data name="ERROR_EXCEL_WORKSHEET" xml:space="preserve">
+    <value>Problem accessing the Excel worksheet</value>
+  </data>
+  <data name="ERROR_EXPECTED_ONE_SELECTED_FEATURE" xml:space="preserve">
+    <value>Incorrect number of selected features; exactly one feature must be selected in AOI layer if a layer is specified</value>
+  </data>
+  <data name="ERROR_FILE_ACCESS" xml:space="preserve">
+    <value>Problem accessing file</value>
+  </data>
+  <data name="ERROR_INVALID_WMX_DB" xml:space="preserve">
+    <value>Specified Workflow Manager database is invalid or inaccessible</value>
+  </data>
+  <data name="ERROR_JOB_ASSIGNMENT_IGNORED" xml:space="preserve">
+    <value>Assignee type is not specified; assignee will be ignored</value>
+  </data>
+  <data name="ERROR_JOB_EXECUTION" xml:space="preserve">
+    <value>Error while executing job</value>
+  </data>
+  <data name="ERROR_JOB_ID_PARSE" xml:space="preserve">
+    <value>Could not get an int value from the retrieved job ID; is a Workflow Manager table corrupt?</value>
+  </data>
+  <data name="ERROR_JXL_BACKUP" xml:space="preserve">
+    <value>Problem saving the .jxl file</value>
+  </data>
+  <data name="ERROR_LICENSE_RELATED" xml:space="preserve">
+    <value>License problem; verify that core and Workflow Manager licenses are available and checked out, license server is reachable, etc.</value>
+  </data>
+  <data name="ERROR_MXD_DOWNLOAD" xml:space="preserve">
+    <value>Problem downloading the map document from the Workflow Manager database or saving it to file</value>
+  </data>
+  <data name="ERROR_MXD_UPLOAD" xml:space="preserve">
+    <value>Problem opening the map document or storing it to the Workflow Manager database</value>
+  </data>
+  <data name="ERROR_NO_ADD_ATTACHMENTS_HELD_JOBS" xml:space="preserve">
+    <value>Current user does not have permission to add attachments to held jobs</value>
+  </data>
+  <data name="ERROR_NO_ADD_COMMENTS_HELD_JOBS" xml:space="preserve">
+    <value>Current user does not have permission to add comments to held jobs</value>
+  </data>
+  <data name="ERROR_NO_ASSIGN_JOB_PRIVILEGE" xml:space="preserve">
+    <value>Current user does not have permission to assign jobs</value>
+  </data>
+  <data name="ERROR_NO_CLOSE_JOB_PRIVILEGE" xml:space="preserve">
+    <value>Current user does not have permission to close jobs</value>
+  </data>
+  <data name="ERROR_NO_CREATE_JOB_PRIVILEGE" xml:space="preserve">
+    <value>Current user does not have permission to create jobs</value>
+  </data>
+  <data name="ERROR_NO_DELETE_JOB_PRIVILEGE" xml:space="preserve">
+    <value>Current user does not have permission to delete jobs</value>
+  </data>
+  <data name="ERROR_NO_MANAGE_ATTACHMENTS_PRIVILEGE" xml:space="preserve">
+    <value>Current user does not have permission to add/remove job attachments</value>
+  </data>
+  <data name="ERROR_NO_OR_MULTIPLE_STEPS" xml:space="preserve">
+    <value>The specified job must have exactly one active/current step; multiple active steps (or no active steps) are not allowed</value>
+  </data>
+  <data name="ERROR_NO_SPATIAL_NOTIFICATIONS_FOUND" xml:space="preserve">
+    <value>No spatial notifications found in Workflow Manager database</value>
+  </data>
+  <data name="ERROR_NO_WORKSPACES_DEFINED" xml:space="preserve">
+    <value>No data workspaces found in Workflow Manager database</value>
+  </data>
+  <data name="ERROR_OPERATOR_NOT_FOUND" xml:space="preserve">
+    <value>Operator is not supported in this context; use one of '&lt;', '&lt;=', '&gt;', '&gt;=', '=', '&lt;&gt;' or 'Contains'</value>
+  </data>
+  <data name="ERROR_SPATIAL_NOTIFICATION_CREATION" xml:space="preserve">
+    <value>An error occurred while creating the spatial notification</value>
+  </data>
+  <data name="ERROR_SPATIAL_NOTIFICATION_EXISTS" xml:space="preserve">
+    <value>A spatial notification with the given name already exists</value>
+  </data>
+  <data name="ERROR_TAM_DOWNLOAD" xml:space="preserve">
+    <value>Problem downloading the Task Assistant workbook from the Workflow Manager database or saving it to file</value>
+  </data>
+  <data name="ERROR_TAM_UPLOAD" xml:space="preserve">
+    <value>Problem opening the Task Assistant workbook or storing it to the Workflow Manager database</value>
+  </data>
+  <data name="ERROR_UNKNOWN_QUERY" xml:space="preserve">
+    <value>Specified query cannot be found</value>
+  </data>
+  <data name="ERROR_UNSPECIFIED" xml:space="preserve">
+    <value>An error occurred while running the tool</value>
+  </data>
+  <data name="ERROR_USER_NOT_ADMIN" xml:space="preserve">
+    <value>The current user is not an administrator on the Workflow Manager database</value>
+  </data>
+  <data name="ERROR_USER_NOT_FOUND" xml:space="preserve">
+    <value>Specified user not found in Workflow Manager database</value>
+  </data>
+  <data name="ERROR_VERSION_LOOKUP" xml:space="preserve">
+    <value>Could not determine the available versions for the specified data workspace</value>
+  </data>
+  <data name="ERROR_WORKSPACE" xml:space="preserve">
+    <value>Problem connecting to workspace, or no versions detected?</value>
+  </data>
+  <data name="ERROR_WORKSPACE_FETCH" xml:space="preserve">
+    <value>Could not load a data workspace from the current spreadsheet row</value>
+  </data>
+  <data name="ERROR_WORKSPACE_NOT_FOUND" xml:space="preserve">
+    <value>The specified data workspace cannot be found in the Workflow Manager database</value>
+  </data>
+  <data name="MSG_DONE" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="TOOL_ADD_AREA_EVALUATOR_TO_SN" xml:space="preserve">
+    <value>Add Area Evaluator to Spatial Notification</value>
+  </data>
+  <data name="TOOL_ADD_ATTACHMENT_TO_JOB" xml:space="preserve">
+    <value>Add Attachment to Job</value>
+  </data>
+  <data name="TOOL_ADD_COMMENT_TO_JOB" xml:space="preserve">
+    <value>Add Comment to Job</value>
+  </data>
+  <data name="TOOL_ADD_DATASET_CONDITION_TO_SN" xml:space="preserve">
+    <value>Add Dataset Condition to Spatial Notification</value>
+  </data>
+  <data name="TOOL_ASSIGN_JOB" xml:space="preserve">
+    <value>Assign Job</value>
+  </data>
+  <data name="TOOL_BACKUP_WORKFLOW_MANAGER_DB" xml:space="preserve">
+    <value>Backup Workflow Manager Database</value>
+  </data>
+  <data name="TOOL_CLOSE_JOB" xml:space="preserve">
+    <value>Close Job</value>
+  </data>
+  <data name="TOOL_CREATE_DATA_WORKSPACES_FROM_SPREADSHEET" xml:space="preserve">
+    <value>Create Data Workspaces from Excel Spreadsheet</value>
+  </data>
+  <data name="TOOL_CREATE_JOB" xml:space="preserve">
+    <value>Create Job</value>
+  </data>
+  <data name="TOOL_CREATE_SPATIAL_NOTIFICATION_WITH_EMAIL" xml:space="preserve">
+    <value>Create Spatial Notification with E-mail Notifier</value>
+  </data>
+  <data name="TOOL_CREATE_SPATIAL_NOTIFICATION_WITH_EMAIL_2" xml:space="preserve">
+    <value>Create Spatial Notification with E-mail Notifier 2</value>
+  </data>
+  <data name="TOOL_DELETE_DATA_WORKSPACE" xml:space="preserve">
+    <value>Delete Data Workspace</value>
+  </data>
+  <data name="TOOL_DELETE_JOB" xml:space="preserve">
+    <value>Delete Job</value>
+  </data>
+  <data name="TOOL_DELETE_MAP_DOCUMENT" xml:space="preserve">
+    <value>Delete Map Document</value>
+  </data>
+  <data name="TOOL_DELETE_ORPHANED_TYPES" xml:space="preserve">
+    <value>Delete Orphaned Types</value>
+  </data>
+  <data name="TOOL_DELETE_TASK_ASSISTANT_WORKBOOK" xml:space="preserve">
+    <value>Delete Task Assistant Workbook</value>
+  </data>
+  <data name="TOOL_DOWNLOAD_MAP_DOCUMENT" xml:space="preserve">
+    <value>Download Map Document</value>
+  </data>
+  <data name="TOOL_DOWNLOAD_TASK_ASSISTANT_WORKBOOK" xml:space="preserve">
+    <value>Download Task Assistant Workbook</value>
+  </data>
+  <data name="TOOL_EXECUTE_JOB" xml:space="preserve">
+    <value>Execute Job</value>
+  </data>
+  <data name="TOOL_EXPORT_DATA_WORKSPACES_TO_SPREADSHEET" xml:space="preserve">
+    <value>Export Data Workspaces to Excel Spreadsheet</value>
+  </data>
+  <data name="TOOL_IMPORT_AD_CONFIG" xml:space="preserve">
+    <value>Import Active Directory Configuration</value>
+  </data>
+  <data name="TOOL_LIST_ALL_DATA_WORKSPACES" xml:space="preserve">
+    <value>List All Data Workspaces</value>
+  </data>
+  <data name="TOOL_LIST_ALL_MAP_DOCUMENTS" xml:space="preserve">
+    <value>List All Map Documents</value>
+  </data>
+  <data name="TOOL_LIST_ALL_TASK_ASSISTANT_WORKBOOKS" xml:space="preserve">
+    <value>List All Task Assistant Workbooks</value>
+  </data>
+  <data name="TOOL_LIST_JOBS" xml:space="preserve">
+    <value>List Jobs</value>
+  </data>
+  <data name="TOOL_LIST_JOBS_USING_QUERY" xml:space="preserve">
+    <value>List Jobs Using Query</value>
+  </data>
+  <data name="TOOL_LIST_USERS" xml:space="preserve">
+    <value>List Users</value>
+  </data>
+  <data name="TOOL_MODIFY_ADMIN_ACCESS" xml:space="preserve">
+    <value>Modify Administrator Access</value>
+  </data>
+  <data name="TOOL_MODIFY_PRIVILEGE_ASSIGNMENT" xml:space="preserve">
+    <value>Modify Privilege Assignment</value>
+  </data>
+  <data name="TOOL_REPORT_POSSIBLE_ERRORS" xml:space="preserve">
+    <value>Report Possible Errors</value>
+  </data>
+  <data name="TOOL_SEND_JOB_NOTIFICATION" xml:space="preserve">
+    <value>Send Job Notification</value>
+  </data>
+  <data name="TOOL_SET_DEFAULT_WORKSPACE_FOR_JOB_TYPE" xml:space="preserve">
+    <value>Set Default Workspace for Job Type</value>
+  </data>
+  <data name="TOOL_UPLOAD_MAP_DOCUMENT" xml:space="preserve">
+    <value>Upload Map Document</value>
+  </data>
+  <data name="TOOL_UPLOAD_TASK_ASSISTANT_WORKBOOK" xml:space="preserve">
+    <value>Upload Task Assistant Workbook</value>
+  </data>
+</root>

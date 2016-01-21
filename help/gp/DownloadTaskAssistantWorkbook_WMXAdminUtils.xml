@@ -1,0 +1,43 @@
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20101229</CreaDate>
+    <CreaTime>14430000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+    <ArcGISProfile>ItemDescription</ArcGISProfile>
+  </Esri>
+  <tool xmlns="" name="DownloadTaskAssistantWorkbook" displayname="Download Task Assistant Workbook" toolboxalias="WMXAdminUtils" softwarerestriction="none">
+    <summary>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Given the name of a Task Assistant workbook that's been embedded in the Workflow Manager database, this tool downloads the workbook from the DB and saves it to disk.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</summary>
+    <usage>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;UL&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The default Workflow Manager database must be set before running this tool.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;LI&gt;&lt;P&gt;&lt;SPAN&gt;The user running this tool must have administrative access to the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</usage>
+    <parameters>
+      <param sync="true" name="in_string_sourceName" displayname="Source Name (name of TA workbook to retrieve from database)" datatype="String" direction="Input" expression="in_string_sourceName" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The name of the Task Assistant workbook to be downloaded.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on the Task Assistant workbooks present in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;P&gt;&lt;SPAN&gt;The name of the Task Assistant workbook to be downloaded.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The domain for this parameter is based on the Task Assistant workbooks present in the Workflow Manager database.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="out_file_tamWorkbookXml" displayname="Target Workbook (path to output Task Assistant workbook XML file)" datatype="File" direction="Output" expression="out_file_tamWorkbookXml" type="Required">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The location and name of the .xml file to which the Task Assistant workbook should be downloaded.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;NOTE: The tool will also save a ".TMStyle" file of the same name to the same location, to preserve any icon styles associated with the workbook.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;P&gt;&lt;SPAN&gt;The location and name of the .xml file to which the Task Assistant workbook should be downloaded.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;NOTE: The tool will also save a ".TMStyle" file of the same name to the same location, to preserve any icon styles associated with the workbook.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+      <param sync="true" name="in_string_wmxDatabaseAlias" displayname="Workflow Manager database alias" datatype="String" direction="Input" expression="in_string_wmxDatabaseAlias" type="Optional">
+        <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+        <pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;An optional parameter specifying that this tool should run on some database other than the default Workflow Manager database. If left blank, the default Workflow Manager database will be used.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+      </param>
+    </parameters>
+  </tool>
+  <dataIdInfo>
+    <idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Given the name of a Task Assistant workbook that's been embedded in the Workflow Manager database, this tool downloads the workbook from the DB and saves it to disk.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs>
+    <idCitation>
+      <resTitle>Download Task Assistant Workbook</resTitle>
+    </idCitation>
+    <searchKeys>
+      <keyword>download</keyword>
+      <keyword>retrieve</keyword>
+      <keyword>export</keyword>
+      <keyword>task</keyword>
+      <keyword>assistant</keyword>
+      <keyword>workbook</keyword>
+      <keyword>workflow</keyword>
+      <keyword>tam</keyword>
+    </searchKeys>
+  </dataIdInfo>
+</metadata>
