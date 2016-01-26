@@ -1,7 +1,7 @@
 # workflowmanager-admin-tools
 The "workflowmanager-admin-tools" are a collection of supplementary geoprocessing tools and Python scripts that may help individuals and organizations who are working with an ArcGIS Workflow Manager database.
 
-![App](https://github.com/ArcGIS/workflowmanager-admin-tools/master/workflowmanager-admin-tools.png)
+![App](workflowmanager-admin-tools.png)
 
 ## Features
 Toolboxes:
@@ -102,7 +102,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-A copy of the license is available in the repository's [license.txt](https://github.com/ArcGIS/workflowmanager-admin-tools/master/license.txt) file.
+A copy of the license is available in the repository's [license.txt](license.txt) file.
 
 [](Esri Tags: ArcGIS Workflow Manager, Geoprocessing Tools, Admin, Database)
 [](Esri Language: C#)
